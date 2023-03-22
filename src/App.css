@@ -1,6 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap");
 * {
   margin: 0;
   padding: 0;
+  font-family: "League Spartan";
 }
 
 html, body, #root, .App {
@@ -44,8 +46,16 @@ html, body, #root, .App {
   display: flex;
   justify-content: space-between;
 }
+.App .Calculator__settings--themeSwitch .Switch .SwitchInput {
+  height: 100%;
+  background-color: hsl(222, 26%, 31%);
+  position: relative;
+}
 .App .Calculator__settings--themeSwitch .Switch .SwitchInput input {
   width: 50px;
+}
+.App .Calculator__settings--themeSwitch .Switch .SwitchInput input::-webkit-slider-thumb {
+  background-color: red;
 }
 .App .Calculator__results {
   width: 100%;
@@ -59,6 +69,7 @@ html, body, #root, .App {
 }
 .App .Calculator__grid {
   width: 100%;
+  height: 50%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 20px;
@@ -66,4 +77,11 @@ html, body, #root, .App {
 }
 .App .Calculator__grid .span-two {
   grid-column: span 2;
+}
+.App .Calculator__grid button {
+  outline: none;
+  border: none;
+  font-family: "League Spartan";
+  font-weight: 400;
+  border-radius: 16px;
 }/*# sourceMappingURL=App.css.map */
