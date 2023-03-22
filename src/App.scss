@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+  
+html, body, #root, .App {
+    width: 100%;
+    height: 100%;
+}
+
+.App {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .Calculator {
+        max-width: 500px;
+        max-height: 700px;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &__settings {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+
+            p {
+                font-size: 22px;
+            }
+
+            &--themeSwitch {
+                width: 30%;
+                display: flex;
+                justify-content: space-between;
+                flex-direction: row;
+
+                div {
+
+                    &:nth-child(1) {
+                        display: flex;
+                        align-items: end;
+                    }
+                }
+
+                .Switch {
+                    .ThemeNumbers {
+                        display: flex;
+                        justify-content: space-between;
+                    }
+
+                    .SwitchInput {
+                        input {
+                            width: 50px;
+                        }
+                    }
+                }
+            }
+        }
+
+        &__results {
+            width: 100%;
+            height: 15%;
+            display: flex;
+            justify-content: end;
+            align-items: center;
+
+            p {
+                font-size: 40px;
+            }
+        }
+
+        &__grid {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 20px;
+            padding: 40px;
+
+            .span-two {
+                grid-column: span 2;
+            }
+        }
+    }
+}
